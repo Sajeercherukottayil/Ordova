@@ -54,7 +54,10 @@ class _SalesScreenState extends State<SalesScreen> {
             children: [
               Icon(icon, color: theme.colorScheme.primary),
               const SizedBox(height: 6),
-              Text(value, style: theme.textTheme.titleLarge!.copyWith(fontWeight: FontWeight.bold)),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(value, style: theme.textTheme.titleLarge!.copyWith(fontWeight: FontWeight.bold)),
+              ),
               Text(label, style: theme.textTheme.bodySmall),
             ],
           ),

@@ -1,9 +1,25 @@
 # Ordova
 
+![Ordova: waiter phone and kitchen tablet](screenshots/hero.png)
+
 Order taking and kitchen management for a small café. Works on the shop's Wi-Fi only: no internet, no account, no monthly cost.
 
 - **Kitchen device (ground floor)**: holds all data, shows the live ticket board, beeps on new orders.
 - **Waiter phones (first floor)**: pick a table, add items, send to kitchen, get a sound when an order is ready.
+
+## Screenshots
+
+| Tables | Taking an order | Review & send | Order ready |
+|---|---|---|---|
+| ![Tables](screenshots/02_tables.png) | ![Take order](screenshots/03_take_order.png) | ![Review order](screenshots/04_review_order.png) | ![Table ready](screenshots/05_table_ready.png) |
+
+| Bill | Sales report | Menu | Settings |
+|---|---|---|---|
+| ![Bill](screenshots/06_bill.png) | ![Sales report](screenshots/07_sales.png) | ![Menu](screenshots/08_menu.png) | ![Settings](screenshots/09_settings.png) |
+
+**Kitchen board (tablet)**
+
+![Kitchen board](screenshots/11_kitchen.png)
 
 ## Setup in the shop
 
@@ -32,6 +48,9 @@ Tip: give the kitchen tablet a fixed IP (DHCP reservation) in the router so wait
 flutter pub get
 flutter test        # starts a real server + client on localhost
 flutter build apk --release
+
+# regenerate the screenshots in screenshots/
+flutter test integration_test/screenshots_test.dart -d windows --dart-define=OUT_DIR=screenshots
 ```
 
 Code layout:

@@ -217,9 +217,9 @@ class _BillScreenState extends State<BillScreen> {
                       if (m != paymentMethods.first) const SizedBox(width: 8),
                       Expanded(
                         child: FilledButton(
-                          style: FilledButton.styleFrom(padding: const EdgeInsets.all(14)),
+                          style: FilledButton.styleFrom(padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 14)),
                           onPressed: selected.isEmpty ? null : () => _pay(m, selected, s.billFor(table).length),
-                          child: Text('Paid · $m'),
+                          child: FittedBox(fit: BoxFit.scaleDown, child: Text('Paid · $m')),
                         ),
                       ),
                     ],
